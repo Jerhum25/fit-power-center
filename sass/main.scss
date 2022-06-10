@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eee;
+
+    header {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+
+        #logo {
+            width: 250px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    main {
+        .vitrine {
+            width: 100%;
+            height: 41vw;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .coachs {
+            h1 {
+                text-align: center;
+                font-size: 30px;
+                margin: 50px 0;
+            }
+
+            .cards {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+
+                .card {
+                    min-width: 150px;
+                    max-width: 300px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    box-shadow: 10px 10px 10px #666;
+                    margin-bottom: 20px;
+
+                    img {
+                        min-width: 150px;
+                        max-width: 300px;
+                        object-fit: cover;
+                        padding: 10px;
+                    }
+
+                    h2 {
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .inauguration {
+        h2 {
+            text-align: center;
+            font-size: 25px;
+            margin: 50px 0;
+        }
+
+        .affiche-inauguration {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px auto;
+
+            img {
+                width: 40%;
+            }
+        }
+    }
+
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        background: rgb(88, 255, 46);
+        padding: 30px;
+
+        h2 {
+            text-align: center;
+        }
+
+        .coordonnees {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 50%;
+            margin: 20px auto;
+            h3{
+                margin: 15px 0;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+
+            .reseaux {
+                line-height: 35px;
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    body {
+        header {
+            #logo {
+                width: 150px;
+            }
+        }
+
+        main {
+            .vitrine{
+                height: 80vw;
+            }
+            .inauguration {
+                .affiche-inauguration {
+                    width: 95%;
+
+                    img {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+
+        footer{
+            .coordonnees{
+                width: 98%;
+                justify-content: space-between;
+            }
+        }
+    }
+}
